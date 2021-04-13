@@ -14,7 +14,21 @@ Check out the starter code for this project here: https://ci-wdi-900.github.io/i
 
 * Your project is hosted on GitHub pages
 
+## Overview
+
+We'll use two APIs for this project. 
+
+The first API, Mapbox, will accept an address and give us back the longitude / latitude of that address. 
+
+The second API, Satellite Passes API
+
 ## Steps
+
+#### 1. Get a Mapbox API Key
+
+> :warning: **Never add a private API key to GitHub! Bots will find these and steal them (potentially costing you $$)!**
+
+Create an 
 
 
 ## Stretch goals
