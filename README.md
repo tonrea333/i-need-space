@@ -160,11 +160,11 @@ After recieving a response from the API, console.log out the UTC date/time at wh
 
 #### 5. Displaying Information to the User
 
-Finally, display when the satellite will rise, culminate, and set on the DOM. You can do this wherever you like! Just try to make it look good.
+Finally, add Javascript to display on the DOM the UTC date/time at which the target satellite will rise, culminate, and set on the horizon. You can display this information wherever you like on the page! You may want to edit the HTML to create a designated "output" area.
 
 #### 6. CSS, Responsiveness
 
-Now that all the API functionality works, customize your web application. Edit the CSS rules to make it look how you want. This can be as in-depth as you want it to be.
+Now that all the API functionality works, customize your web application! Edit the CSS rules to make it look how you want. This can be as in-depth as you want it to be.
 
 Additionally, make sure that your site is responsive, meaning that it looks good on both desktop and mobile devices.
 
