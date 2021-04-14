@@ -22,9 +22,9 @@ The first API, Mapbox, accepts an address and gives us back the longitude / lati
 
 The second API, Satellite Passes API, accepts a longitude / latitude and a satellite's ID (known as a NORAD) and gives us back information about when the satellite will next be visible over those coordinates.
 
-Mapbox Geocoding API: https://docs.mapbox.com/api/search/geocoding/
+**Mapbox Geocoding API: https://docs.mapbox.com/api/search/geocoding/**
 
-Satellite Passes API: https://satellites.fly.dev/
+**Satellite Passes API: https://satellites.fly.dev/**
 
 ## Steps
 
@@ -48,7 +48,7 @@ So the first step in using this API is to generate an API key.
 
 Great, now that you have a Mapbox API key you're all set to make an API request. Mapbox provides loads of features. We'll only be using the 'Geocoding' feature which takes an address and produces the longitude / latitude of that address.
 
-At this point, read through the Mapbox Geocoding API documentation here: https://docs.mapbox.com/api/search/geocoding/ starting at the 'Forward Geocoding' section. The 'Example request: Forward geocoding' section is particularly useful. Note that `curl` is simply a command-line program to make API requests. 
+At this point, read through the Mapbox Geocoding API documentation here: https://docs.mapbox.com/api/search/geocoding/ starting at the `Forward Geocoding` section. The `Example request: Forward geocoding` section is particularly useful. In the example section, note that `curl` is simply a command-line program to make API requests. 
 
 Look at the example request in the documentation that makes a request to geocode Los Angeles. If you're logged in, the documentation will even auto-populate the example API request with your personal API key. Try copying that whole example URL and pasting it into the address bar of your browser. If you get a reasonable JSON response containing information about the geocoded address, then you've succeeded! It should look something like this:
 
