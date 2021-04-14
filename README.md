@@ -82,7 +82,7 @@ Look at the example request in the documentation that makes a request to geocode
                 -118.2439,
                 34.0544
             ],
-            ...
+            "..."
 ```
 
 #### 3. Make an API Request to Mapbox in the Javascript
