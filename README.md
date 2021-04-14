@@ -106,12 +106,14 @@ Now, we need take that longitude and latitude along with the satellite ID (a.k.a
 As with before, I recommend first reading the API's documentation [here](https://satellites.fly.dev/) and making a test requet in the browser before diving into the Javascript. Additionally, the documentation for this API is pretty sparse so here's an aditional example:
 
 ```
-The following endpoint will make a request for the next visible satellite pass at longitude=-57.93 and latitude=-34.91 within the next 15 days.
+The following endpoint will make a request for the next visible satellite pass at 
+longitude=-57.93 and latitude=-34.91 within the next 15 days.
 
 == REQUEST ==
 https://satellites.fly.dev/passes/25544?lat=-34.91&lon=-57.93&limit=1&days=15&visible_only=true
 
-The response below is an array of satellite passes (containing one value). Each satellite pass object contains four properties:
+The response below is an array of satellite passes (containing one value). 
+Each satellite pass object contains four properties:
 * rise        - contains information on when the satellite rises over the horizon into view
 * culmination - contains information on when the satellite peaks in its arc on the horizon
 * set         - contains informatinon on when the satellite sets below the horizon
