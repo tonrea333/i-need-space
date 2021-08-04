@@ -38,8 +38,10 @@ function searchNorad() {
                 console.log(satRequired)
                 console.log(satExtract)
                 
-                const satInfo =  satRequired.features;
-console.log(satRequired.features)
+                const satInfo =  satRequired.features > 4;
+console.log(satRequired.features[0].center[0])
+console.log(satRequired.features[0].center[1])
+
                 if (satInfo) {
                     for (const featureID of satRequired.features){
                         await satData(satRequired.features, featureID, 5)
