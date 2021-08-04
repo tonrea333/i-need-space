@@ -13,6 +13,9 @@ function searchNorad() {
     const addressEntryValue = addressEntry.value;
     const apiEntryValue = apiEntry.value;
 
+
+
+
     //Console logs to evaluate and confirm user inputs
     console.log(addressEntryValue)
     console.log(apiEntryValue)
@@ -28,49 +31,46 @@ function searchNorad() {
             const x = data.features
             console.log(addressEntryValue)
             console.log(apiEntryValue)
-
-
-            //==============================
-            async function satData() {
-                //Extract satelite information from mapbox
-                const satExtract = await fetch("https://api.mapbox.com/geocoding/v5/mapbox.places/" + addressEntryValue + ".json?access_token=" + apiEntryValue);
-                const satRequired = await satExtract.json();
-                console.log(satRequired)
-                console.log(satExtract)
-
-                const longPoint = satRequired.features[0].center[0];
-                const latPoint = satRequired.features[0].center[1]
-                const noradInput = document.querySelector("#norad")
-                const noradInputValue = noradInput.value;
-    
-                fetch("https://satellites.fly.dev/passes/" + noradInputValue + "?lat=" + latPoint + "&lon=" + longPoint + "&limit=1&days=15&visible_only=true")
-                    .then(function (bootdata) {
-                        return bootdata.json();
-                    })
-                    .then(function (data) {
-                        console.log(data, "norad data")
-                    })
-                console.log(latPoint)
-                console.log(longPoint)
-                
-                console.log(noradInputValue)
-
-                //Const for longatitude and Latitude
-                
-
-
-            } satData()
-            
-
-
-
         })
+    //========================================================================
+    
+    
+    async function satData() {
+        //Extract satelite information from mapbox
+        const satExtract = await fetch("https://api.mapbox.com/geocoding/v5/mapbox.places/" + addressEntryValue + ".json?access_token=" + apiEntryValue);
+        const satRequired = await satExtract.json();
+        console.log(satRequired)
+        console.log(satExtract)
+
+        //Const need to for longitude and latitude; addtionally change satellite value to const.
+
+        const longPoint = satRequired.features[0].center[0];
+        const latPoint = satRequired.features[0].center[1]
+        const noradInput = document.querySelector("#norad")
+        const noradInputValue = noradInput.value;
+
+        //Fetch for satellite api
+
+        fetch("https://satellites.fly.dev/passes/" + noradInputValue + "?lat=" + latPoint + "&lon=" + longPoint + "&limit=1&days=15&visible_only=true")
+            .then(function (bootdata) {
+                return bootdata.json();
+            })
+            .then(function (data) {
+                console.log(data, "norad data")
+            })
+        console.log(latPoint)
+        console.log(longPoint)
+
+        console.log(noradInputValue)
+
+        //Const for longatitude and Latitude
 
 
 
+    } satData()
 
 
-
-
-
+}
+function searchNorad(){
+    location.href ="satindex.html"
 }
