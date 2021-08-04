@@ -57,11 +57,36 @@ function searchNorad() {
             })
             .then(function (data) {
                 console.log(data, "norad data")
+
+console.log(data[0].culmination.utc_datetime)
+//Const to convert data rise culmination and set UTC
+
+const culminationData = data[0].culmination.utc_datetime;
+const riseData = data[0].rise.utc_datetime;
+console.log(riseData)
+const setData = data[0].set.utc_datetime;
+//const to place converted data into to readable html
+const outputRiseUtc = document.querySelector("#riseUTC");
+const outputCulminateUtc = document.querySelector("#culminateUTC");
+const outputSetUtc = document.querySelector("#setUTC");
+
+//Connecting html locations with JS outputs
+
+const a = outputRiseUtc.riseData 
+console.log(a)
+
+
+
             })
         console.log(latPoint)
         console.log(longPoint)
-
         console.log(noradInputValue)
+//Const for the UTC outputs
+
+
+
+
+
 
         //Const for longatitude and Latitude
 
@@ -69,8 +94,10 @@ function searchNorad() {
 
     } satData()
 
-
-}
+//Function to transition user from input screen to output.
 function searchNorad(){
     location.href ="satindex.html"
 }
+}
+
+
