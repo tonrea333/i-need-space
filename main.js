@@ -37,17 +37,33 @@ function searchNorad() {
                 const satRequired = await satExtract.json();
                 console.log(satRequired)
                 console.log(satExtract)
-                
-                const satInfo =  satRequired.features > 4;
-console.log(satRequired.features[0].center[0])
-console.log(satRequired.features[0].center[1])
 
-                if (satInfo) {
-                    for (const featureID of satRequired.features){
-                        await satData(satRequired.features, featureID, 5)
-                    }
-                }
-            }satData()
+                const longPoint = satRequired.features[0].center[0];
+                const latPoint = satRequired.features[0].center[1]
+                const noradInput = document.querySelector("#norad")
+                const noradInputValue = noradInput.value;
+    
+                fetch("https://satellites.fly.dev/passes/" + noradInputValue + "?lat=" + latPoint + "&lon=" + longPoint + "&limit=1&days=15&visible_only=true")
+                    .then(function (bootdata) {
+                        return bootdata.json();
+                    })
+                    .then(function (data) {
+                        console.log(data, "norad data")
+                    })
+                console.log(latPoint)
+                console.log(longPoint)
+                
+                console.log(noradInputValue)
+
+                //Const for longatitude and Latitude
+                
+
+
+            } satData()
+            
+
+
+
         })
 
 
