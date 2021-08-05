@@ -73,11 +73,12 @@ button {
     padding: 6px 12px;
     border-radius: 3px;
     cursor: pointer;
-    transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.4s;
 }
 
 button:hover {
     box-shadow: 0 0 20px #caf0f8;
+    background-color: rgb(43, 56, 228);
 }
 @media screen and (max-width: 700px) {
     #masterbody{ 

@@ -13,7 +13,9 @@ function searchNorad() {
     const addressEntryValue = addressEntry.value;
     const apiEntryValue = apiEntry.value;
 
-
+if(addressEntryValue === String," ",String){
+   let  to =addressEntryValue + "%" + String;
+}
 
 
     //Console logs to evaluate and confirm user inputs
