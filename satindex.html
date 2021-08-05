@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,11 @@
     <title>Satellite Viewer</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="satstyles.css">
 </head>
+
 <body>
 
     <div class="content">
@@ -17,7 +20,7 @@
         <h1>
             This is when you can see a certain satellite.
         </h1>
-        
+
         <div class="section">
             <div class="row">
                 <h2>
@@ -26,70 +29,73 @@
             </div>
             <div class="row">
                 <label>The rise UTC</label>
-                <output id="riseUTC">
+                <div id="riseUTC">test</div>
             </div>
             <div class="row">
                 <label>The culminate UTC</label>
-                <input type="text" id="culminateUTC" >
-            </div>
-            <div class="row">
-                <label>The set UTC</label>
-                <input type="text"  id="setUTC" />
-            </div>
-            <div class="row">
-                <button id="search">
-                    Search
-                </button>
-            </div>
-        </div>
+                <div type="text" id="culminateUTC">
+                </div>
+                <div class="row">
+                    <label>The set UTC</label>
+                    <div type="text" id="setUTC">
+                    </div>
+                    <div class="row">
+                        <button id="search">
+                            Search
+                        </button>
+                    </div>
+                </div>
 
-        <div class="section">
-            <div class="row">
-                <h2>
-                    Notable Satellites
-                </h2>
-            </div>
-            <div class="row">
-                <div class="title">
-                    <b>Name</b>
+                <div class="section">
+                    <div class="row">
+                        <h2>
+                            Notable Satellites
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <div class="title">
+                            <b>Name</b>
+                        </div>
+                        <div class="title">
+                            <b>NORAD (Satellite ID)</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            Int. Space Station
+                        </div>
+                        <div class="item">
+                            25544
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            Hubble Space Telescope
+                        </div>
+                        <div class="item">
+                            20580
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            SpaceX Dragon
+                        </div>
+                        <div class="item">
+                            46920
+                        </div>
+                    </div>
+                    <div class="row">
+                        <b>Find more of the brightest satellites' NORAD IDs&nbsp;<a
+                                href="https://www.n2yo.com/satellites/?c=1">here</a>.</b>
+                    </div>
+                    
                 </div>
-                <div class="title">
-                    <b>NORAD (Satellite ID)</b>
-                </div>
-            </div>
-            <div class="row">
-                <div class="item">
-                    Int. Space Station
-                </div>
-                <div class="item">
-                    25544
-                </div>
-            </div>
-            <div class="row">
-                <div class="item">
-                    Hubble Space Telescope
-                </div>
-                <div class="item">
-                    20580
-                </div>
-            </div>
-            <div class="row">
-                <div class="item">
-                    SpaceX Dragon
-                </div>
-                <div class="item">
-                    46920
-                </div>
-            </div>
-            <div class="row">
-                <b>Find more of the brightest satellites' NORAD IDs&nbsp;<a href="https://www.n2yo.com/satellites/?c=1">here</a>.</b>
-            </div>
-        </div>
 
-    </div>
+            </div>
 
-    <script src="apiKey.js"></script>
-    <script src="satoutput.js"></script>
-    <script src="main.js"></script>
+            <script src="apiKey.js"></script>
+            <script src="satoutput.js"></script>
+            <script src="main.js"></script>
 </body>
+
 </html>
