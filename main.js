@@ -34,7 +34,7 @@ if(addressEntryValue === String," ",String){
             console.log(addressEntryValue)
             console.log(apiEntryValue)
         })
-    //========================================================================
+    //========================================================================ASYNC Method below==========
     
     
     async function satData() {
